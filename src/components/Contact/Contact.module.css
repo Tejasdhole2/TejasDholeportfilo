@@ -1,0 +1,151 @@
+/* ===============================
+   CONTACT SECTION
+================================= */
+.contact {
+  padding: 100px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Large Screens */
+@media (min-width: 1600px) {
+  .contact {
+    padding: 120px 15%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .contact {
+    padding: 80px 6%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .contact {
+    padding: 60px 5%;
+  }
+}
+
+/* ===============================
+   GLASS CONTAINER
+================================= */
+.glassContainer {
+  width: 100%;
+  max-width: 600px;
+  padding: 50px;
+  background: var(--glass);
+  border-radius: 30px;
+  border: 1px solid var(--glass-border);
+  text-align: center;
+  backdrop-filter: blur(15px);
+  transition: 0.3s ease;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .glassContainer {
+    padding: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .glassContainer {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+}
+
+/* ===============================
+   FORM
+================================= */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* ===============================
+   INPUT & TEXTAREA
+================================= */
+.form input,
+.form textarea {
+  padding: 15px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  color: white;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  resize: none;
+  width: 100%;
+}
+
+/* Focus Effect */
+.form input:focus,
+.form textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+/* Responsive Input */
+@media (max-width: 480px) {
+  .form input,
+  .form textarea {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ===============================
+   BUTTON
+================================= */
+.form button {
+  padding: 15px;
+  background: var(--accent);
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #0f172a;
+}
+
+/* Hover Effect */
+.form button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px var(--accent);
+}
+
+/* Active Effect */
+.form button:active {
+  transform: scale(0.98);
+}
+
+/* Mobile Button */
+@media (max-width: 480px) {
+  .form button {
+    padding: 13px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ===============================
+   ULTRA SMALL DEVICES
+================================= */
+@media (max-width: 360px) {
+  .glassContainer {
+    padding: 20px 15px;
+  }
+
+  .form {
+    gap: 15px;
+  }
+}

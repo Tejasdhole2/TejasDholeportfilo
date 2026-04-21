@@ -1,0 +1,233 @@
+/* --- SECTION LAYOUT --- */
+.section {
+  padding: 100px 0;
+  background-color: #0b0b1a;
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.heading span {
+  color: #00d2ff;
+}
+
+/* --- RESPONSIVE GRID --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* --- PROJECT CARD STYLES --- */
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #00d2ff;
+  box-shadow: 0 10px 30px rgba(0, 210, 255, 0.1);
+}
+
+/* 🖼️ IMAGE HANDLING - FIXED FOR RESPONSIVE & BIG IMAGES */
+.imgContainer {
+  width: 100%;
+  height: 240px; 
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.projectImg {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain; /* 👈 Important: Keeps images from stretching */
+  transition: transform 0.5s ease;
+}
+
+.card:hover .projectImg {
+  transform: scale(1.08);
+}
+
+/* --- CONTENT DETAILS --- */
+.details {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.headerRow h3 {
+  font-size: 1.4rem;
+  color: #fff;
+  margin: 0;
+}
+
+.language {
+  font-size: 0.8rem;
+  color: #00d2ff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.description {
+  color: #a0a0b0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.tag {
+  background: rgba(0, 210, 255, 0.1);
+  color: #00d2ff;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* --- FOOTER & LINKS --- */
+.footer {
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.links {
+  display: flex;
+  gap: 15px;
+}
+
+.iconLink {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.iconLink:hover {
+  color: #00d2ff;
+  transform: scale(1.2);
+}
+
+/* --- BUTTONS --- */
+.buttonWrapper {
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  align-items: center;     /* Centers vertically within the wrapper */
+  margin-top: 60px;
+  width: 100%;             /* Ensures it spans the full container width */
+  clear: both;             /* Prevents floating elements from pushing it */
+}
+
+
+.viewMoreBtn {
+  background: transparent;
+  color: #00d2ff;
+  border: 2px solid #00d2ff;
+  padding: 12px 35px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+   justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.viewMoreBtn:hover {
+  background: #00d2ff;
+  color: #0b0b1a;
+  box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+}
+
+/* --- ALL PROJECTS PAGE SPECIFIC --- */
+.allProjectsWrapper {
+  min-height: 100vh;
+  background-color: #0b0b1a;
+  padding: 120px 0 60px 0; /* Extra top padding for Navbar */
+}
+
+.backNav {
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #00d2ff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.backLink:hover {
+  transform: translateX(-5px);
+  color: #ffffff;
+}
+
+.subText {
+  text-align: center;
+  color: #a0a0b0;
+  margin-top: -30px;
+  margin-bottom: 50px;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .imgContainer {
+    height: 200px;
+  }
+}

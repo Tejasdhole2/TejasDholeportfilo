@@ -1,0 +1,59 @@
+.about {
+  padding: 100px 0;
+  background: #0f172a;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* Slightly wider for text */
+  gap: 60px;
+  align-items: flex-start;
+  padding: 0 20px;
+}
+
+.title { font-size: 3rem; margin-bottom: 25px; font-weight: 800; }
+.title span { color: #38bdf8; }
+
+.fullDescription {
+  color: #94a3b8;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  white-space: pre-line; /* Keeps your paragraphs intact */
+}
+
+.resumeFrame {
+  width: 100%;
+  height: 600px;
+  background: #1e293b;
+  border-radius: 20px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.iframe { width: 100%; height: 100%; border: none; }
+
+.ctaButton {
+  padding: 14px 35px;
+  background: #38bdf8;
+  color: #0f172a;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #7dd3fc;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+}
+
+@media (max-width: 968px) {
+  .container { grid-template-columns: 1fr; }
+  .resumeFrame { height: 500px; }
+}

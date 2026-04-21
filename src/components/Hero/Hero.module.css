@@ -1,0 +1,209 @@
+/* =========================================
+   HERO SECTION - MODERN RESPONSIVE DESIGN
+========================================= */
+
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 8%;
+  background: linear-gradient(135deg, #0f172a, #0b1c2d);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft glow background */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(56,189,248,0.15), transparent 70%);
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+/* ===============================
+   TEXT CONTENT
+================================= */
+.content {
+  flex: 1;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.intro {
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.mainTitle {
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  line-height: 1.15;
+  font-weight: 800;
+  margin: 15px 0;
+  color: #ffffff;
+}
+
+.mainTitle span {
+  color: var(--accent);
+}
+
+.typewriter {
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  color: #94a3b8;
+  margin-bottom: 35px;
+  min-height: 1.6rem;
+}
+
+/* ===============================
+   BUTTONS
+================================= */
+.btnGroup {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primaryBtn {
+  background: var(--accent);
+  color: #0f172a;
+  border: none;
+  box-shadow: 0 8px 25px rgba(56,189,248,0.4);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(56,189,248,0.6);
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.secondaryBtn:hover {
+  background: rgba(255,255,255,0.05);
+  transform: translateY(-3px);
+}
+
+/* ===============================
+   IMAGE SECTION
+================================= */
+.imageWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.glowCard {
+  width: clamp(240px, 28vw, 360px);
+  height: clamp(240px, 28vw, 360px);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  overflow: hidden;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 40px rgba(56,189,248,0.6);
+  animation: morph 8s ease-in-out infinite;
+}
+
+.glowCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Morph Animation */
+@keyframes morph {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  50% {
+    border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+  }
+  100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    padding: 100px 6% 60px;
+    text-align: center;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .btnGroup {
+    justify-content: center;
+  }
+
+  .imageWrapper {
+    margin-top: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .hero {
+    padding: 80px 5% 50px;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .btnGroup {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+  }
+
+  .glowCard {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 400px) {
+  .mainTitle {
+    font-size: 1.8rem;
+  }
+
+  .glowCard {
+    width: 200px;
+    height: 200px;
+  }
+}
